@@ -1,0 +1,26 @@
+<div class="main">
+  <div class="main_wrapper">
+    <form [formGroup]="starWarsForm">
+      <mat-form-field appearance="outline">
+        <input
+          #input
+          matInput
+          placeholder="Search characters..."
+          formControlName="filterValue"
+        >
+      </mat-form-field>
+    </form>
+
+    <app-table-section
+      [dataSource]="dataSource"
+      [inputValue]="input.value"
+      [errorMessage]="errorMessage"
+      (showPlanetInfoEmitter)="showPlanetInfo($event)"
+    />
+
+    <ng-template #planetTooltip>
+      <app-popover [planetData]="planetData"/>
+    </ng-template>
+  </div>
+</div>
+

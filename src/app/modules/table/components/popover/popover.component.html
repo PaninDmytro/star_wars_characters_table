@@ -1,0 +1,10 @@
+<div class="planet_popover">
+  <h3 class="planet_title">{{ planetData()?.name }}</h3>
+
+  @for (data of popoverData; track data.label) {
+    <div class="planet_detail">
+      <p class="planet_label">{{ data.label }}</p>
+      <p class="planet_value">{{ data.content(planetData()) }}</p>
+    </div>
+  }
+</div>
