@@ -98,6 +98,14 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://github.com/PaninDmytro/star_wars_characters_table/",
+            "name": "Panin Dmytro",
+            "email": "dmitriyp1598@gmail.com"
+          }
         }
       }
     }
